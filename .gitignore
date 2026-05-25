@@ -1,0 +1,13 @@
+# Godot 4+ specific ignores
+.godot/
+/android/
+.import/
+export_presets.cfg
+
+# Mono-specific overrides (por si acaso)
+.mono/
+data_*/
+
+# System files
+.DS_Store
+Thumbs.db

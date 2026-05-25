@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://dokugiqciu64h"]
+
+[ext_resource type="Texture2D" uid="uid://dxf6fgqa3bfjn" path="res://icon.svg" id="1_b4h6p"]
+[ext_resource type="Script" uid="uid://bup0jrxaw4k3s" path="res://data_terminal.gd" id="1_esnov"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_esnov"]
+radius = 131.04579
+
+[node name="DataTerminal" type="Area2D" unique_id=2081419460]
+script = ExtResource("1_esnov")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1660794471]
+modulate = Color(1, 0.5921569, 0.1254902, 1)
+texture = ExtResource("1_b4h6p")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=595923866]
+position = Vector2(0, 2)
+shape = SubResource("CircleShape2D_esnov")

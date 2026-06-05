@@ -1,18 +1,44 @@
 [gd_scene format=3 uid="uid://dokugiqciu64h"]
 
-[ext_resource type="Texture2D" uid="uid://dxf6fgqa3bfjn" path="res://icon.svg" id="1_b4h6p"]
 [ext_resource type="Script" uid="uid://bup0jrxaw4k3s" path="res://data_terminal.gd" id="1_esnov"]
+[ext_resource type="Texture2D" uid="uid://bbfkel3fvb0mm" path="res://traga2.jpg" id="2_esnov"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_esnov"]
-radius = 131.04579
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6ea2l"]
+size = Vector2(92, 77)
 
-[node name="DataTerminal" type="Area2D" unique_id=2081419460]
+[node name="DataTerminal" type="Area2D" unique_id=2015915412]
 script = ExtResource("1_esnov")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1660794471]
-modulate = Color(1, 0.5921569, 0.1254902, 1)
-texture = ExtResource("1_b4h6p")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=524128704]
+position = Vector2(287, 66)
+shape = SubResource("RectangleShape2D_6ea2l")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=595923866]
-position = Vector2(0, 2)
-shape = SubResource("CircleShape2D_esnov")
+[node name="HTTPRequest" type="HTTPRequest" parent="." unique_id=630785447]
+
+[node name="icono_btc" type="Sprite2D" parent="." unique_id=354469792]
+modulate = Color(1, 0.94509804, 0.15294118, 1)
+position = Vector2(286, 69)
+scale = Vector2(0.17100695, 0.14538716)
+texture = ExtResource("2_esnov")
+
+[node name="CryptoText" type="RichTextLabel" parent="." unique_id=233297880]
+unique_name_in_owner = true
+top_level = true
+offset_left = 378.0
+offset_top = 48.0
+offset_right = 629.0
+offset_bottom = 162.0
+bbcode_enabled = true
+text = "Esperanto iteraccion"
+
+[node name="HTTPRequest2" type="HTTPRequest" parent="." unique_id=1191135545]
+use_threads = true
+
+[node name="NombreMoneda" type="Label" parent="." unique_id=938490116]
+offset_left = 234.0
+offset_top = -19.0
+offset_right = 379.0
+offset_bottom = 21.0
+
+[node name="TextoTimer" type="Timer" parent="." unique_id=1249296759]
+wait_time = 0.054
